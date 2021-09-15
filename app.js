@@ -1,3 +1,4 @@
+const header = document.querySelector("header");
 const menuBar = document.getElementById("menu-bar");
 const navBar = document.querySelector("header .navbar");
 const navBarLinks = document.querySelectorAll("header .navbar a");
@@ -51,6 +52,8 @@ window.addEventListener('scroll', () => {
             x.style.height = "100%";
             x.style.width = "100%";
         });
+        header.style.transition = "top 3s linear";
+        header.style.top = "-100%";
     } else {
         topleft.forEach(x => {
             x.style.visibility = "hidden";
@@ -62,6 +65,8 @@ window.addEventListener('scroll', () => {
             x.style.height = "0";
             x.style.width = "0";
         });
+        header.style.transition = "top 1s linear";
+        header.style.top = "0";
     }
 }
 )
